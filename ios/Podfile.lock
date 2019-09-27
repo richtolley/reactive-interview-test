@@ -1,0 +1,16 @@
+PODS:
+  - ReactiveKit (3.13.2)
+
+DEPENDENCIES:
+  - ReactiveKit
+
+SPEC REPOS:
+  trunk:
+    - ReactiveKit
+
+SPEC CHECKSUMS:
+  ReactiveKit: db560c8a9883447798b449c49346f292cbb54f4c
+
+PODFILE CHECKSUM: ca6ab8ea5838be4f3e7e7b33242118eb19d2a365
+
+COCOAPODS: 1.8.0
