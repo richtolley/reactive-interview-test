@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ReactiveKit
 
 class FormViewController: UIViewController {
   @IBOutlet weak var nameField: UITextField!
@@ -16,8 +15,14 @@ class FormViewController: UIViewController {
   @IBOutlet weak var toggleSwitch: UISwitch!
   @IBOutlet weak var submitButton: UIButton!
 
+
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
+
+
+
   }
 }
 
