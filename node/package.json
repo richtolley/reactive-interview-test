@@ -1,0 +1,14 @@
+{
+  "name": "reactive-interview-test",
+  "version": "1.0.0",
+  "description": "backend for interview test",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "richard tolley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
