@@ -47,13 +47,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD0-c7-VK0">
+                                <rect key="frame" x="50" y="360" width="314" height="42"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vaj-8J-7YH" firstAttribute="trailing" secondItem="azZ-j7-tRp" secondAttribute="trailing" id="3GR-lw-xj1"/>
                             <constraint firstItem="rk9-Lr-kxz" firstAttribute="leading" secondItem="4de-mI-bKU" secondAttribute="trailing" constant="20" id="CDj-pi-vgG"/>
                             <constraint firstItem="Ap1-WQ-gMl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="E8O-Rd-9We"/>
+                            <constraint firstItem="eD0-c7-VK0" firstAttribute="top" secondItem="4de-mI-bKU" secondAttribute="bottom" constant="30" id="E96-i7-NCL"/>
                             <constraint firstItem="AAu-q0-ZZR" firstAttribute="leading" secondItem="vaj-8J-7YH" secondAttribute="leading" id="Sbn-jI-xI1"/>
+                            <constraint firstItem="eD0-c7-VK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="UB7-nk-pMk"/>
                             <constraint firstItem="rk9-Lr-kxz" firstAttribute="centerY" secondItem="4de-mI-bKU" secondAttribute="centerY" id="aRh-b5-hsM"/>
                             <constraint firstItem="Ap1-WQ-gMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFv-OH-AA7"/>
                             <constraint firstItem="vaj-8J-7YH" firstAttribute="leading" secondItem="azZ-j7-tRp" secondAttribute="leading" id="fgF-yN-3DS"/>
@@ -64,12 +74,20 @@
                             <constraint firstItem="AAu-q0-ZZR" firstAttribute="trailing" secondItem="vaj-8J-7YH" secondAttribute="trailing" id="ozC-bp-1x8"/>
                             <constraint firstItem="azZ-j7-tRp" firstAttribute="top" secondItem="Ap1-WQ-gMl" secondAttribute="bottom" constant="30" id="qQA-C3-Art"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azZ-j7-tRp" secondAttribute="trailing" constant="20" id="vVL-N2-qa0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eD0-c7-VK0" secondAttribute="trailing" constant="50" id="vak-pN-22q"/>
                             <constraint firstItem="4de-mI-bKU" firstAttribute="leading" secondItem="AAu-q0-ZZR" secondAttribute="leading" id="yCm-Us-rl0"/>
                             <constraint firstItem="AAu-q0-ZZR" firstAttribute="top" secondItem="vaj-8J-7YH" secondAttribute="bottom" constant="20" id="yje-6Q-JIv"/>
                             <constraint firstItem="azZ-j7-tRp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zbj-QJ-Q8z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="azZ-j7-tRp" id="OqO-xd-JCj"/>
+                        <outlet property="optionSegment" destination="AAu-q0-ZZR" id="8Gm-Qs-ufX"/>
+                        <outlet property="passwordField" destination="vaj-8J-7YH" id="F2R-jJ-t47"/>
+                        <outlet property="submitButton" destination="eD0-c7-VK0" id="ODt-k2-2PI"/>
+                        <outlet property="toggleSwitch" destination="rk9-Lr-kxz" id="bUp-Bs-OdR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
