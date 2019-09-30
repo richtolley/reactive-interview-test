@@ -38,4 +38,19 @@ class SigninService {
             .asSingle()
             .map { try SigninService.decoder.decode(AuthResponse.self, from: $0) }
     }
+    
+    func subscribeToTheNewsletter(token: String) -> Completable {
+        guard let url = URL(string: "http://localhost:8081/newsletter") else {
+            return Completable.error(SigninServiceError.invalidRequest)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = [
+            "authorization": token
+        ]
+        
+        return URLSession.shared.rx.data(request: request)
+            .ignoreElements()
+    }
 }
