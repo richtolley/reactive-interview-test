@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210C088D2340E71D0041BCF1 /* Subviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C088C2340E71C0041BCF1 /* Subviewable.swift */; };
 		2189AAD2233E502800C2CE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189AAD1233E502800C2CE6B /* AppDelegate.swift */; };
 		2189AAD6233E502800C2CE6B /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189AAD5233E502800C2CE6B /* FormViewController.swift */; };
 		2189AAD9233E502800C2CE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2189AAD7233E502800C2CE6B /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		110D304B902B4BA35D974D2A /* Pods_ReactiveTest_ReactiveTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveTest_ReactiveTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F09ECA5F98E122A66FBBD8 /* Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ReactiveTest-ReactiveTestUITests/Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		210C088C2340E71C0041BCF1 /* Subviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subviewable.swift; sourceTree = "<group>"; };
 		2189AACE233E502800C2CE6B /* ReactiveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2189AAD1233E502800C2CE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2189AAD5233E502800C2CE6B /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		2189AAD0233E502800C2CE6B /* ReactiveTest */ = {
 			isa = PBXGroup;
 			children = (
+				210C088C2340E71C0041BCF1 /* Subviewable.swift */,
 				2189AAD1233E502800C2CE6B /* AppDelegate.swift */,
 				2189AAD5233E502800C2CE6B /* FormViewController.swift */,
 				2189AB01233E54C200C2CE6B /* FormViewModel.swift */,
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210C088D2340E71D0041BCF1 /* Subviewable.swift in Sources */,
 				2189AB02233E54C200C2CE6B /* FormViewModel.swift in Sources */,
 				2189AAD6233E502800C2CE6B /* FormViewController.swift in Sources */,
 				2189AAD2233E502800C2CE6B /* AppDelegate.swift in Sources */,
