@@ -20,8 +20,6 @@ class FormViewController: UIViewController {
   private let toggleSwitchLabel = UILabel()
   private let submitButton = UIButton()
 
-  private let stackView = UIStackView()
-
   private let viewModel: FormViewModel
 
   init(viewModel: FormViewModel) {
@@ -33,21 +31,9 @@ class FormViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
-  var name: ControlProperty<String?> { return nameField.rx.text }
-  var password: ControlProperty<String?> { return passwordField.rx.text }
-  var toggle: ControlProperty<Bool> { return toggleSwitch.rx.isOn }
-  var submitClick: ControlEvent<Void> { return submitButton.rx.tap }
-
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
-
-
-  }
-
-  func bindViewModel(viewModel: FormViewModel) {
-
-    
   }
 }
 
@@ -76,9 +62,6 @@ extension FormViewController: Subviewable {
   }
 
   func setupHierarchy() {
-    view.addSubview(stackView)
-
-
     view.addSubview(titleLabel)
     view.addSubview(nameField)
     view.addSubview(nameErrorLabel)
