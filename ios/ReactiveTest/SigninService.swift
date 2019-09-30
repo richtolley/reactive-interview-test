@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 struct AuthResponse: Codable {
-    
+    let authorization: String
 }
 
 enum SigninServiceError: Error {
@@ -30,26 +30,12 @@ class SigninService {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.httpBody = [
+        request.allHTTPHeaderFields = [
             "username": username,
             "password": password
-            ].toJSONData(encoder: SigninService.encoder)
+            ]
         return URLSession.shared.rx.data(request: request)
             .asSingle()
             .map { try SigninService.decoder.decode(AuthResponse.self, from: $0) }
     }
-}
-
-protocol JSONEncodable: Encodable {
-    func toJSONData(encoder: JSONEncoder) -> Data?
-}
-
-extension JSONEncodable {
-    func toJSONData(encoder: JSONEncoder) -> Data? {
-        return try? encoder.encode(self)
-    }
-}
-
-extension Dictionary: JSONEncodable where Key: Encodable, Value: Encodable {
-    
 }
