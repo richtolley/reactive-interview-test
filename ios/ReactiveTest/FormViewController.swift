@@ -13,14 +13,19 @@ import RxSwift
 class FormViewController: UIViewController {
   private let titleLabel = UILabel()
   private let nameField = UITextField()
+  private let nameErrorLabel = UILabel()
   private let passwordField = UITextField()
-  private let optionSegment = UISegmentedControl(items: ["First", "Second"])
+  private let passwordErrorLabel = UILabel()
   private let toggleSwitch = UISwitch()
   private let toggleSwitchLabel = UILabel()
   private let submitButton = UIButton()
 
+  private let stackView = UIStackView()
 
-  init() {
+  private let viewModel: FormViewModel
+
+  init(viewModel: FormViewModel) {
+    self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -28,16 +33,16 @@ class FormViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
-  //var name: Observable<String>? { return nameField.rx }
-  //var password: Observable<String> { return passwordField.rx }
-
-  var viewModel: FormViewModel?
-
-
+  var name: ControlProperty<String?> { return nameField.rx.text }
+  var password: ControlProperty<String?> { return passwordField.rx.text }
+  var toggle: ControlProperty<Bool> { return toggleSwitch.rx.isOn }
+  var submitClick: ControlEvent<Void> { return submitButton.rx.tap }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
+
+
   }
 
   func bindViewModel(viewModel: FormViewModel) {
@@ -49,26 +54,48 @@ class FormViewController: UIViewController {
 extension FormViewController: Subviewable {
   func setupViews() {
     view.backgroundColor = .white
-    titleLabel.text = "Form Test"
+    titleLabel.text = "Reactive Test"
     titleLabel.textAlignment = .center
+
     nameField.placeholder = "Name"
+    nameErrorLabel.textColor = .red
+
+    nameErrorLabel.font = UIFont.systemFont(ofSize: 12)
+    nameErrorLabel.text = "Describe wrongness here"
+
     passwordField.placeholder = "Password"
-    toggleSwitchLabel.text = "Toggle"
+    passwordErrorLabel.textColor = .red
+    passwordErrorLabel.text = "Describe wrongness here"
+    passwordErrorLabel.font = UIFont.systemFont(ofSize: 12)
+
+    toggleSwitchLabel.text = "Subscribe to the newsletter?"
+    toggleSwitch.isOn = true
+
     submitButton.setTitle("Submit", for: .normal)
     submitButton.backgroundColor = .systemBlue
   }
 
   func setupHierarchy() {
+    view.addSubview(stackView)
+
+
     view.addSubview(titleLabel)
     view.addSubview(nameField)
+    view.addSubview(nameErrorLabel)
     view.addSubview(passwordField)
-    view.addSubview(optionSegment)
+    view.addSubview(passwordErrorLabel)
     view.addSubview(toggleSwitch)
     view.addSubview(toggleSwitchLabel)
     view.addSubview(submitButton)
   }
 
   func setupConstraints() {
+    NSLayoutConstraint.activate([
+      titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+      titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50)
+    ])
+
+
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -82,23 +109,30 @@ extension FormViewController: Subviewable {
       nameField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
     ])
 
+    nameErrorLabel.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      nameErrorLabel.topAnchor.constraint(equalTo: self.nameField.bottomAnchor, constant: 20),
+      nameErrorLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
+      nameErrorLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
+    ])
+
     passwordField.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      passwordField.topAnchor.constraint(equalTo: self.nameField.bottomAnchor, constant: 30),
+      passwordField.topAnchor.constraint(equalTo: self.nameErrorLabel.bottomAnchor, constant: 30),
       passwordField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
       passwordField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
     ])
 
-    optionSegment.translatesAutoresizingMaskIntoConstraints = false
+    passwordErrorLabel.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      optionSegment.topAnchor.constraint(equalTo: self.passwordField.bottomAnchor, constant: 30),
-      optionSegment.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
-      optionSegment.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
+      passwordErrorLabel.topAnchor.constraint(equalTo: self.passwordField.bottomAnchor, constant: 30),
+      passwordErrorLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
+      passwordErrorLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
     ])
 
     toggleSwitch.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      toggleSwitch.topAnchor.constraint(equalTo: self.optionSegment.bottomAnchor, constant: 30),
+      toggleSwitch.topAnchor.constraint(equalTo: self.passwordErrorLabel.bottomAnchor, constant: 30),
       toggleSwitch.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50)
     ])
 
@@ -114,9 +148,6 @@ extension FormViewController: Subviewable {
       submitButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -70),
       submitButton.topAnchor.constraint(equalTo: self.toggleSwitch.bottomAnchor, constant: 20)
     ])
-
   }
-
-
 }
 

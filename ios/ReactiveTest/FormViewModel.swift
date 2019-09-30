@@ -10,9 +10,5 @@ import Foundation
 import RxSwift
 
 class FormViewModel {
-  var name: Observable<String>?
-  var password: Observable<String>?
-
-  
 
 }

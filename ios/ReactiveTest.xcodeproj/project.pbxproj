@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		210C088D2340E71D0041BCF1 /* Subviewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C088C2340E71C0041BCF1 /* Subviewable.swift */; };
+		210C088F2340FA260041BCF1 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C088E2340FA260041BCF1 /* SigninService.swift */; };
+		210C08912341EEEE0041BCF1 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C08902341EEEE0041BCF1 /* SignedInViewController.swift */; };
 		2189AAD2233E502800C2CE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189AAD1233E502800C2CE6B /* AppDelegate.swift */; };
 		2189AAD6233E502800C2CE6B /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189AAD5233E502800C2CE6B /* FormViewController.swift */; };
 		2189AAD9233E502800C2CE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2189AAD7233E502800C2CE6B /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		110D304B902B4BA35D974D2A /* Pods_ReactiveTest_ReactiveTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveTest_ReactiveTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F09ECA5F98E122A66FBBD8 /* Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ReactiveTest-ReactiveTestUITests/Pods-ReactiveTest-ReactiveTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		210C088C2340E71C0041BCF1 /* Subviewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subviewable.swift; sourceTree = "<group>"; };
+		210C088E2340FA260041BCF1 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
+		210C08902341EEEE0041BCF1 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		2189AACE233E502800C2CE6B /* ReactiveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2189AAD1233E502800C2CE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2189AAD5233E502800C2CE6B /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				210C088C2340E71C0041BCF1 /* Subviewable.swift */,
 				2189AAD1233E502800C2CE6B /* AppDelegate.swift */,
+				210C08902341EEEE0041BCF1 /* SignedInViewController.swift */,
 				2189AAD5233E502800C2CE6B /* FormViewController.swift */,
 				2189AB01233E54C200C2CE6B /* FormViewModel.swift */,
 				2189AAD7233E502800C2CE6B /* Main.storyboard */,
@@ -129,6 +134,7 @@
 				2189AADC233E502C00C2CE6B /* LaunchScreen.storyboard */,
 				2189AADF233E502C00C2CE6B /* Info.plist */,
 				2189AB03233E5B3800C2CE6B /* SceneDelegate.swift */,
+				210C088E2340FA260041BCF1 /* SigninService.swift */,
 			);
 			path = ReactiveTest;
 			sourceTree = "<group>";
@@ -414,10 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				210C088D2340E71D0041BCF1 /* Subviewable.swift in Sources */,
+				210C08912341EEEE0041BCF1 /* SignedInViewController.swift in Sources */,
 				2189AB02233E54C200C2CE6B /* FormViewModel.swift in Sources */,
 				2189AAD6233E502800C2CE6B /* FormViewController.swift in Sources */,
 				2189AAD2233E502800C2CE6B /* AppDelegate.swift in Sources */,
 				2189AB04233E5B3800C2CE6B /* SceneDelegate.swift in Sources */,
+				210C088F2340FA260041BCF1 /* SigninService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
