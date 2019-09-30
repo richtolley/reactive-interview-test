@@ -19,6 +19,7 @@
 		2189AB04233E5B3800C2CE6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189AB03233E5B3800C2CE6B /* SceneDelegate.swift */; };
 		68BC7DC7892D219434997834 /* Pods_ReactiveTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4703DBECB63413B06C8BA89B /* Pods_ReactiveTestTests.framework */; };
 		9098EC15B09B121432924EEA /* Pods_ReactiveTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEDA693CF69D065C78A9EC1 /* Pods_ReactiveTest.framework */; };
+		B8B2E2112341F69000EF09C2 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2E2102341F69000EF09C2 /* SigninService.swift */; };
 		FB472C121FFE014D3C54805E /* Pods_ReactiveTest_ReactiveTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110D304B902B4BA35D974D2A /* Pods_ReactiveTest_ReactiveTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		6C348378FD551ED04262A012 /* Pods-ReactiveTest-ReactiveTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTest-ReactiveTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveTest-ReactiveTestUITests/Pods-ReactiveTest-ReactiveTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6593DBAF0D03919560FDF6 /* Pods-ReactiveTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveTestTests/Pods-ReactiveTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C5A0669E0C730DC2137E314 /* Pods-ReactiveTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTest.release.xcconfig"; path = "Target Support Files/Pods-ReactiveTest/Pods-ReactiveTest.release.xcconfig"; sourceTree = "<group>"; };
+		B8B2E2102341F69000EF09C2 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
 		FEBAE145FA8EA30B188D59CC /* Pods-ReactiveTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveTestTests.release.xcconfig"; path = "Target Support Files/Pods-ReactiveTestTests/Pods-ReactiveTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				2189AADC233E502C00C2CE6B /* LaunchScreen.storyboard */,
 				2189AADF233E502C00C2CE6B /* Info.plist */,
 				2189AB03233E5B3800C2CE6B /* SceneDelegate.swift */,
+				B8B2E2102341F69000EF09C2 /* SigninService.swift */,
 			);
 			path = ReactiveTest;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				2189AB02233E54C200C2CE6B /* FormViewModel.swift in Sources */,
 				2189AAD6233E502800C2CE6B /* FormViewController.swift in Sources */,
 				2189AAD2233E502800C2CE6B /* AppDelegate.swift in Sources */,
+				B8B2E2112341F69000EF09C2 /* SigninService.swift in Sources */,
 				2189AB04233E5B3800C2CE6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
