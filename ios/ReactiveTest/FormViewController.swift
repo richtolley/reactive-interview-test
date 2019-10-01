@@ -19,7 +19,6 @@ class FormViewController: UIViewController {
   private let toggleSwitch = UISwitch()
   private let toggleSwitchLabel = UILabel()
   private let submitButton = UIButton()
-
   private let viewModel: FormViewModel
 
   init(viewModel: FormViewModel) {

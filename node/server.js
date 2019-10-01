@@ -2,6 +2,7 @@ const express = require('express');
 const crypto = require('crypto-js');
 const fs = require('fs')
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
    res.send('Reactive Test Backend');
@@ -61,7 +62,7 @@ app.post('/newsletter', (req, res) => {
 	})
 })
 
-const server = app.listen(8081, () => {
+const server = app.listen(PORT, () => {
    const port = server.address().port;
    console.log("Example app listening at http://localhost:%s", port);
 })
