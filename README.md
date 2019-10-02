@@ -31,6 +31,7 @@ c) Password must contain at least one number
 ### API
 
 * To run the backend you will need node installed - to start it just run `npm start` from the `node` directory.
+* Alternatively, the backend is deployed on Heroku at: https://reactive-interview-test.herokuapp.com (since it is on the free tier it may take a while to respond for the first time if it hasn't been used for a while)
 * The test uses a simple API with 2 endpoints as follows:
 
 `POST /register`
