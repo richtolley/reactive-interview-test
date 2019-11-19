@@ -6,12 +6,11 @@ The test uses a very simple API with 2 endpoints. This is run on a backend conta
 #### 1. Validation
 * Validate that the user's name is correct
 a) Username must be longer than 2 chars
-b) Password must be less than 30 chars
+b) Password must be less or equal to 20 chars
 
 * Validate that the user's password is correct. Rules are as follows
 a) Password must be longer than 4 chars
-b) Password must be less than or equal to 20 chars
-c) Password must contain at least one number
+b) Password must be less than 30 chars
 
 #### 2.
 * Validate that both name and password are valid, and enable/disable the submit button accordingly
