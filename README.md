@@ -1,6 +1,4 @@
-## Reactive Interview Test
-
-*  MVVM reactive interview test
+# MVVM Interview Test
 
 ## Task 
 The test uses a very simple API with 2 endpoints. This is run on a backend contained in the repo: see the the 'API' section below. The app is contained in the 'ios' folder. The task is to build a simple login screen, implementing form validation and sign in, with an optional newsletter subscription, controlled by the toggle switch.
@@ -22,7 +20,7 @@ c) Password must contain at least one number
 * Submit the request to the backend using the sign-in endpoint when the user clicks on the submit button
 
 #### 4.
-* If the registration succeeed and if the 'subscribe' toggle switch is on, subscribe the user to the newsletter
+* If the registration succeeded and if the 'subscribe' toggle switch is on, subscribe the user to the newsletter
 * using the /newsletter endpoint
 
 #### 5. 
