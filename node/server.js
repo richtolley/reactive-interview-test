@@ -13,8 +13,7 @@ let usernameValid = (name) => {
 }
 
 let passwordValid = (password) => {
-	let hasNum = /\d/
-	return password.length > 4 && password.length <= 20 && hasNum.test(password)
+	return password.length > 4 && password.length < 30
 }
 
 app.post('/register', (req, res) => {

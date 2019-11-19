@@ -3,12 +3,12 @@
 *  MVVM reactive interview test
 
 ## Task 
-The test uses a very simple API with 2 endpoints. This is run on a backend contained in the repo: see the the 'API' section below. The app is contained in the 'ios' folder. The task is to build a simple login screen using `RxSwift`.
+The test uses a very simple API with 2 endpoints. This is run on a backend contained in the repo: see the the 'API' section below. The app is contained in the 'ios' folder. The task is to build a simple login screen, implementing form validation and sign in, with an optional newsletter subscription, controlled by the toggle switch.
 
 #### 1. Validation
 * Validate that the user's name is correct
 a) Username must be longer than 2 chars
-b) Username must be shorter than 20 chars
+b) Password must be less than 30 chars
 
 * Validate that the user's password is correct. Rules are as follows
 a) Password must be longer than 4 chars
